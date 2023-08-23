@@ -339,4 +339,9 @@ input::-webkit-inner-spin-button {
     .card-input input {
         font-size: .5rem;
     }
+
+    .card-numbers {
+        font-size: .65rem;
+        padding-bottom: .6rem;
+    }
 }
