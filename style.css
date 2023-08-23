@@ -1,0 +1,328 @@
+:root {
+    /* primary */
+    --red: hsl(0, 100%, 66%);
+    /* neutral */
+    --white: hsl(0, 0%, 100%);
+    --light-grayish-violet: hsl(270, 3%, 87%);
+    --dark-grayish-violet: hsl(279, 6%, 55%);
+    --very-dark-violet: hsl(278, 68%, 11%);
+}
+
+/* css reset */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/*  */
+
+html {
+    font-size: 18px;
+}
+
+body {
+    background: url(images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    font-family: 'Space Grotesk', sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 7rem;
+}
+
+main {
+    display: flex;
+    gap: 7rem;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.card-front {
+    background: url(images/bg-card-front.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 25rem;
+    height: 13rem;
+    border-radius: .5rem;
+    padding: .8rem 1.4rem;
+    color: var(--white);
+}
+
+.card-front img {
+    padding-bottom: 4rem;
+}
+
+.card-numbers {
+    letter-spacing: 5px;
+    font-size: 1.3rem;
+    padding-bottom: 1.5rem;
+}
+
+.card-name-date-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-name {
+    text-transform: uppercase;
+    font-size: .6rem;
+    letter-spacing: 3px;
+    color: var(--light-grayish-violet);
+}
+
+.card-expiration-date {
+    display: flex;
+    align-items: center;
+}
+
+.card-month, .card-year {
+    font-size: .7rem;
+    letter-spacing: 3px;
+    color: var(--light-grayish-violet);
+}
+
+.card-back {
+    background: url(images/bg-card-back.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 25rem;
+    height: 13rem;
+    margin-left: 4.5rem;
+    border-radius: .5rem;
+    padding: .8rem 1.4rem;
+}
+
+.card-cvc {
+    color: var(--white);
+    position: relative;
+    top: 95px;
+    left: 340px;
+}
+
+.card-inputs {
+    width: 24.4rem;
+    padding-top: 2.5rem;    
+}
+
+.card-input {
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.card-input h3 {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: .7rem;
+}
+
+.card-input input {
+    padding: 8px;
+    padding-left: .7rem;
+    border-radius: .5rem;
+    font-size: .8rem;
+    border: .7px solid var(--light-grayish-violet);
+}
+
+.card-input input:focus {
+    outline: .7px solid hsla(278, 93%, 30%, 0.493);
+    border: .7px solid hsla(249, 99%, 64%, 0.404);
+}
+
+.card-input input::placeholder {
+    color: var(--light-grayish-violet);
+}
+
+.card-input-date-cvc-flex {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.mm-yy-flex {
+    display: flex;
+    gap: 15px;
+}
+
+.mm-yy-flex input {
+    width: 50%;
+}
+
+button {
+    background-color: hsl(278, 68%, 11%);
+    width: 100%;
+    border: 0;
+    border-radius: .4rem;
+    padding: .6rem;
+    color: var(--white);
+    font-size: .8rem;
+    cursor: pointer;
+    transition: .2s;
+}
+
+button:hover {
+    background-color: hsl(278, 57%, 23%);
+}
+
+.completed-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 6.5rem;
+    gap: .5rem;
+    width: 20rem;
+    margin-left: 4.4rem;
+}
+
+.completed-state h3 {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    padding-top: 1rem;
+}
+
+.completed-state p {
+    font-size: .9rem;
+    color: var(--dark-grayish-violet);
+    padding-bottom: 1.5rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.error-text {
+    color: var(--red);
+    font-size: .7rem;
+}
+
+.error-border {
+    outline: 1px solid var(--red);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@media (max-width: 1100px) {
+    body {
+        background: initial;
+        background: url(/images/bg-main-mobile.png);
+        background-repeat: repeat-x;
+    }
+
+    main {
+        flex-direction: column;
+    } 
+    
+    body {
+        padding: 1rem;
+    }
+    
+    main {
+        gap: 2rem;
+    }
+    
+    .cards {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 1rem;
+        margin-left: -3.5rem;
+    }
+    
+    .card-front {
+        background-size: cover;
+        width: 16rem;
+        height: 8rem;
+        margin-top: -4rem;
+    }
+    
+    .card-front img {
+        padding-bottom: 2.6rem;
+        width: 18%;
+    }
+    
+    .card-numbers {
+        font-size: .71rem;
+        padding-bottom: .7rem;
+    }
+    
+    .card-name {
+        font-size: .5rem;
+    }
+    
+    .card-month, .card-year {
+        font-size: .5rem;
+    }
+    
+    .card-back {
+        background-size: cover;
+        width: 16rem;
+        height: 8rem;
+        margin-left: initial;
+        margin-right: -7rem;
+    }
+
+    .card-cvc {
+        font-size: .6rem;
+        letter-spacing: 1px;
+        top: 54px;
+        left: 205px;
+    }
+
+    .card-inputs {
+        width: auto;
+        padding-top: 0rem;    
+    }
+    
+    .card-input h3 {
+        font-size: .62rem;
+    }
+    
+    .card-input input {
+        font-size: .7rem;
+    }
+
+    .card-input-date-cvc-flex > * {
+        width: 50%;
+    }
+
+    .completed-state {
+        margin-top: -4rem;
+        margin-left: initial;
+    }
+    
+}

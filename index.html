@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <!--  -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Interactive card details form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main>
+    <section class="cards">
+      <div class="card-front">
+        <img src="images/card-logo.svg" alt="card logo">
+        <h4 class="card-numbers">0000 0000 0000 0000</h4>
+        <div class="card-name-date-flex">
+          <h5 class="card-name">Jane Appleseed</h5>
+          <div class="card-expiration-date">
+            <h5 class="card-month">00/</h5>
+            <h5 class="card-year">00</h4>
+          </div>
+        </div>
+      </div>
+      <div class="card-back">
+        <h5 class="card-cvc">000</h5>
+      </div>
+    </section>
+
+    <section class="card-inputs">
+      <div class="card-input">
+        <h3 class="input-label">Cardholder Name</h3>
+        <input class="input-name" type="text" placeholder="e.g. Jane Appleseed">
+        <p class="error-text card-name-error hidden"></p>
+      </div>
+      <div class="card-input">
+        <h3 class="input-label">Card Number</h3>
+        <input class="input-numbers" type="text" maxlength="19" placeholder="e.g. 1234 5678 9123 0000">
+        <p class="error-text card-number-error hidden"></p>
+      </div>
+      <div class="card-input-date-cvc-flex">
+        <div class="card-input">
+          <h3 class="input-label">Exp. Date (MM/YY)</h3>
+          <div class="mm-yy-flex">
+            <input class="input-month" maxlength="2" type="number" placeholder="MM">
+            <input class="input-year" maxlength="2" type="number" placeholder="YY">
+          </div>
+          <p class="error-text card-date-error"></p>
+        </div>
+        <div class="card-input">
+          <h3 class="input-label">CVC</h3>
+          <input class="input-cvc" maxlength="3" type="number" placeholder="e.g. 123">
+        <p class="error-text card-cvc-error hidden"></p>
+        </div>
+      </div>
+      <button class="confirm-btn">Confirm</button>
+    </section>
+
+    <section class="completed-state hidden">
+        <img src="images/icon-complete.svg" alt="complete icon">
+        <h3>Thank you!</h3>
+        <p>We've added your card details</p>
+        <button class="continue-btn">Continue</button>
+    </section>
+  </main>
+
+  <script src="index.js"></script>
+  
+</body>
+</html>
