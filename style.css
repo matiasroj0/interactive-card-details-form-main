@@ -337,11 +337,11 @@ input::-webkit-inner-spin-button {
     }
 
     .card-input input {
-        font-size: .5rem;
+        font-size: .6rem;
     }
 
     .card-numbers {
-        font-size: .65rem;
+        font-size: .60rem;
         padding-bottom: .6rem;
     }
 }
