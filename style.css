@@ -299,9 +299,10 @@ input::-webkit-inner-spin-button {
     }
 
     .card-cvc {
+        display: inline;
         font-size: .6rem;
         letter-spacing: 1px;
-        top: 54px;
+        top: 47px;
         left: 205px;
     }
 
