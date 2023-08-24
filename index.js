@@ -183,10 +183,14 @@ function checkCVC() {
         inputCVC.classList.add("error-border");
         cvcError.innerText = "Can't be blank";    
         return false;
+    } else if (inputCVC.value.length > 3 || inputCVC.value.length < 3) {
+        cvcError.classList.remove("hidden");
+        inputCVC.classList.add("error-border");
+        cvcError.innerText = "Enter a valid CVC";    
+        return false;
     } else {
         cvcError.classList.add("hidden");
         inputCVC.classList.remove("error-border");
         return true;
     }
 }
-
