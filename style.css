@@ -333,7 +333,8 @@ input::-webkit-inner-spin-button {
 
 @media (max-width: 400px) {
     .card-input h3 {
-        font-size: .53rem;
+        font-size: .57rem;
+        letter-spacing: 2px;
     }
 
     .card-input input {
